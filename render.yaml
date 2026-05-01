@@ -1,0 +1,10 @@
+services:
+  - type: static
+    name: portfolio
+    env: static
+    plan: free
+    branch: main
+    buildCommand: "npm run build"
+    staticPublishPath: dist
+    # Optional: set repo when deploying via render.yaml in repo
+    # repo: https://github.com/your-username/portfolio
