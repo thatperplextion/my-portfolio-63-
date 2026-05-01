@@ -24,7 +24,14 @@ async function build(){
   const htmlSrc = path.resolve(__dirname,'index.html')
   let html = fs.readFileSync(htmlSrc,'utf8')
   // point script to bundled file
-  html = html.replace(/<script type="module" src=".*"><\/script>/, '<script type="module" src="/assets/index.js"></script>')
+  // if CSS was emitted, add a link tag for it so styles load on static hosts
+  const cssPath = path.join(outdir,'assets','index.css')
+  if (fs.existsSync(cssPath)){
+    // insert stylesheet link before the script tag
+    html = html.replace(/<script type="module" src=".*"><\/script>/, '<link rel="stylesheet" href="/assets/index.css">\n    <script type="module" src="/assets/index.js"></script>')
+  } else {
+    html = html.replace(/<script type="module" src=".*"><\/script>/, '<script type="module" src="/assets/index.js"></script>')
+  }
   fs.writeFileSync(path.join(outdir,'index.html'), html, 'utf8')
 
   console.log('Built to', outdir)
