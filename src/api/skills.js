@@ -1,4 +1,5 @@
-const BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000'
+// Use relative API base so the frontend works when served from the same origin
+const BASE = (typeof window !== 'undefined') ? '' : (process.env.VITE_API_BASE || 'http://localhost:4000')
 
 export async function listSkills(){
   const res = await fetch(`${BASE}/api/skills`)

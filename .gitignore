@@ -6,3 +6,12 @@ dist/
 /.env.local
 /.env.development
 /.env.production
+npm-debug.log*
+.env.*.local
+.idea/
+.cache/
+.parcel-cache/
+.next/
+.turbo/
+.pnp.*
+yarn-error.log*
