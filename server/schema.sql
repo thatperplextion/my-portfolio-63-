@@ -1,0 +1,20 @@
+-- Run this SQL to create the `messages` table in your local MySQL
+
+CREATE DATABASE IF NOT EXISTS portfolio;
+USE portfolio;
+
+CREATE TABLE IF NOT EXISTS messages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS skills (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  category VARCHAR(100) DEFAULT NULL,
+  level VARCHAR(50) DEFAULT 'Intermediate',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

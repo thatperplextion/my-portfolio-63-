@@ -1,6 +1,10 @@
 import React from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
+import MessagesAdmin from './components/MessagesAdmin'
+import SkillsAdmin from './components/SkillsAdmin'
+import SkillsList from './components/SkillsList'
 
 const CONTACT = {
   name: 'JUNAID ASAD KHAN',
@@ -38,12 +42,13 @@ export default function App() {
           <p><strong>B.Tech — Artificial Intelligence & Data Science</strong> • CGPA: 8.7</p>
 
           <h3 className="section-sub">Selected Technical Skills</h3>
-          <ul className="skills">
-            <li>Python, Java</li>
-            <li>React, HTML, CSS, JavaScript</li>
-            <li>MySQL, PostgreSQL, MongoDB, Firebase</li>
-            <li>Git, REST APIs, OOP, Data Structures</li>
-          </ul>
+          <p>Below are my main skills (stored in local DB for demo):</p>
+          <div style={{marginTop:10}}>
+            <SkillsList />
+          </div>
+          <div style={{marginTop:12}}>
+            <SkillsAdmin />
+          </div>
         </section>
 
         {/* Projects section removed per request */}
@@ -51,6 +56,16 @@ export default function App() {
         <section id="contact" className="card">
           <h2 className="section-title">Contact</h2>
           <p>Available for part-time internships. Email me at <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> or connect on <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+          <h3 className="section-sub">Contact / Guestbook</h3>
+          <p>Visitors can send a message below — messages are stored in your local MySQL via the demo API.</p>
+          <div className="contact-grid">
+            <div style={{flex:'1 1 420px'}}>
+              <ContactForm onCreated={() => { /* parent may refresh admin list via window event */ }} />
+            </div>
+            <div style={{flex:'1 1 420px'}}>
+              <MessagesAdmin />
+            </div>
+          </div>
           <h3 className="section-sub">Soft Skills</h3>
           <p>Problem Solving • Quick Learner • Time Management • Team Collaboration</p>
         </section>

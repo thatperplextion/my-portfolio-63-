@@ -53,6 +53,26 @@ body{
   .hero{display:flex;flex-direction:column;align-items:flex-start}
 }
 
+.contact-form{display:flex;flex-direction:column;gap:8px}
+.contact-form label{display:flex;flex-direction:column;font-size:0.9rem}
+.contact-form input,.contact-form textarea{padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.contact-form textarea{min-height:100px}
+.form-actions{margin-top:6px}
+.error{color:#ff9b9b;margin-top:8px}
+.messages-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.message-item{background:rgba(255,255,255,0.01);padding:12px;border-radius:10px}
+.message-item .meta{font-size:0.9rem;color:rgba(230,238,248,0.8);display:flex;gap:8px;align-items:center}
+.message-item .time{margin-left:auto;color:rgba(230,238,248,0.5);font-size:0.8rem}
+.editor label{display:block;margin-bottom:6px}
+.editor input,.editor textarea{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.actions{display:flex;gap:8px;margin-top:8px}
+
+.skills-list{display:flex;gap:8px;flex-wrap:wrap}
+.skill-pill{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:0.95rem}
+.skills-form{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.skills-admin-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.skills-admin-list li{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:rgba(255,255,255,0.01)}
+
 @media (max-width:720px){
   .site-header .container{padding:12px}
   .hero h1{font-size:1.5rem}
