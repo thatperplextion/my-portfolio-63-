@@ -12,23 +12,6 @@ const CONTACT = {
   codechef: 'https://www.codechef.com/users/junaid_063'
 }
 
-const projects = [
-  {
-    title: 'DeepLynctus — Code Quality Analyzer',
-    desc: 'AI platform to detect bug-prone files, technical debt and generate reports.',
-    repo: '#'
-  },
-  {
-    title: 'Real-Time Twin Engine',
-    desc: 'Cloud-native microservices platform for real-time modeling and anomaly detection.',
-    repo: '#'
-  },
-  {
-    title: 'Internify (MERN)',
-    desc: 'Internship portal with advanced search, filters and full CRUD functionality.',
-    repo: '#'
-  }
-]
 
 export default function App() {
   return (
@@ -63,20 +46,7 @@ export default function App() {
           </ul>
         </section>
 
-        <section id="projects" className="card">
-          <h2 className="section-title">Selected Projects</h2>
-          <div className="projects-grid">
-            {projects.map((p) => (
-              <article key={p.title} className="project-card">
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
-                <div className="project-links">
-                  {p.repo && <a href={p.repo} target="_blank" rel="noopener noreferrer">Code</a>}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+        {/* Projects section removed per request */}
 
         <section id="contact" className="card">
           <h2 className="section-title">Contact</h2>

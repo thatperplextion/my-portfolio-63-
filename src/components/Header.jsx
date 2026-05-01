@@ -7,7 +7,6 @@ export default function Header() {
         <h2 className="brand">JUNAID ASAD KHAN</h2>
         <nav className="nav">
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>

@@ -34,11 +34,7 @@ body{
 .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
 .about p{margin:8px 0}
 .projects h2{margin-top:4px}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
-.project-card{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px}
-.project-card h3{margin:0 0 8px}
-.project-links{margin-top:12px;display:flex;gap:8px}
-.project-links a{color:var(--accent);text-decoration:none;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.01)}
+/* Projects styles removed (projects section deleted) */
 .contact a{color:var(--accent)}
 .links{margin-top:18px;display:flex;gap:14px}
 .links a{color:var(--accent);text-decoration:underline}
