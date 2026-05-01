@@ -154,7 +154,8 @@ async function main(){
     app.get('/', (req,res)=> res.sendFile(path.join(built,'index.html')))
   }
 
-  const port = process.env.SERVER_PORT || 4000
+  // Prefer platform-provided PORT (Render, Heroku), fall back to SERVER_PORT or 4000
+  const port = process.env.PORT || process.env.SERVER_PORT || 4000
   app.listen(port, () => console.log(`Server listening on http://localhost:${port}`))
 }
 
